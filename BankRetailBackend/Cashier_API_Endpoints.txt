@@ -1,0 +1,26 @@
+End Points for Cashier
+Root Route: cashier/accounts
+
+1. Get account info
+    API Endpoint: {ID}
+
+2. Update account info (withdraw and deposit)
+    API Endpoint: {ID}/{opCode}/{amount}
+
+    opCode: 1.Deposit | 2.Withdraw | 3.Transfer-Deposit | 4.Transfer-withdraw
+
+3. Transfer (withdraw from one account and deposit to another)
+    API Endpoint: /transfer/{senderID}/{receiverID}/{amount}
+
+4. Get the latest n transactions
+    API Endpoint: {accountID}/n={numTransactions}
+
+5. Get transactions between start and end dates (in yyyyMMdd format)
+    API Endpoint: {accountID}/{startDate}/{endDate}
+
+
+
+
+
+4 and 5 are still being tested, 5 maybe subjected to change if the date format
+doesn't parse into datetime objects correctly for comparison.
